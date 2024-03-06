@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* tag selector */ 
+        img { 
+            border: 12px solid green;
+
+        }
+
+        /* class selector */ 
+        .mijn-class{
+            color: blue;
+            background-color: rgb(232, 224, 224);
+        }
+        
+        /* ID selector */ 
+        #mijnheader {
+            font-size: 60px;
+            color: purple;
+        }
+
+    </style>
+
+    <script>
+        // op 1 regel 
+        /* comment die afgesloten moet worden
+        */
+       //variabelen
+
+        var a = 6;
+        var a = 12; //  je krijg geen foutmelding, variabel mag je niet twee keer declareren, als een variabel als bestaat mag die niet twee aangemaakt worden
+
+        let b = 23; let c = "Demo" // punt komma moet is een seprator
+        let d = true 
+
+        
+        console.log('berekening is ' + (a + b) ) // a en b tussen ronde haakjes anders worden ze niet berekend
+
+        // constant waarde die niet overgeschreven mag worden, moet hetzelfde blijven
+        const e = 123 
+
+
+        //functions declaration met een argument (later toegevoegd)
+        function calculate(multiply) { // wat ga je doen met die argument tussen haakjes, zet dat tussen de curly brackets, drm nog een keer vermeld
+            // hier worden wat berekeningen gedaan
+            console.log(e*multiply);
+
+        }
+
+        // function call, aanroepen functie die eerder gemaakt is 
+        calculate(4);
+
+
+        // events 
+        function CalculateWithInput() {
+            // invoer veld uitlezen
+            let element = document.getElementById('invoer1'); // verwijzen naar die element die je eerder hebt gemaakt, dus het invoer veld
+
+            // element is de invoer element en .value is de waarde erin
+            // de eerdere functie wordt gebruikt samen met de invoer van het invoer vakje en dat is een cijfer (number)
+            let waarde = element.value;
+            calculate(waarde);
+
+
+        }
+
+
+
+
+
+    
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1 id="mijnheader">mijn website </h1>
+    <h2>mijn tweede header</h2>
+
+    <p class="mijn-class">Dit is mijn eerste paragraaf</p>
+    <p>Dit is mijn tweede paragraaf</p>
+     <!-- inline sytling -->
+    <span style="color: rgb(255, 0, 4); font-size: 140%;">Dit is mijn eerste span </span>
+    <span>Dit is mijn tweede span </span>
+
+    <img src="https://pbs.twimg.com/profile_images/1156489079250440193/GdjFOHoV_400x400.jpg">
+
+
+    <!-- comment (Dit wordt door de browser genegeerd)-->
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ol>
+
+    <input type="number" id="invoer1"> <!-- invoer veld -->
+    <br>
+    <button type="button" onclick="CalculateWithInput()">  <!-- klik me knop, als je dit drukt wil je de waarde uit invoer1 gebruiken -->
+        klik me 
+
+    </button>
+
+</body>
+</html>
